@@ -1,5 +1,6 @@
 const DEFAULT_ROUTE_CACHE_TTL_MS = 5_000
 const DEFAULT_ROUTE_CACHE_MAX_PAGES = 3
+const DEFAULT_ROUTE_CACHE_DEBUG = false
 
 function parseNonNegativeNumber(value, fallbackValue) {
   const parsedValue = Number(value)
@@ -9,6 +10,18 @@ function parseNonNegativeNumber(value, fallbackValue) {
   }
 
   return parsedValue
+}
+
+function parseBoolean(value, fallbackValue) {
+  if (value === 'true') {
+    return true
+  }
+
+  if (value === 'false') {
+    return false
+  }
+
+  return fallbackValue
 }
 
 export const routeCacheTtlMs = parseNonNegativeNumber(
@@ -21,4 +34,9 @@ export const routeCacheMaxPages = parseNonNegativeNumber(
   DEFAULT_ROUTE_CACHE_MAX_PAGES
 )
 
-export const routeCacheDebugEnabled = import.meta.env.DEV
+export const routeCacheDebugEnabled =
+  import.meta.env.DEV &&
+  parseBoolean(
+    import.meta.env.VITE_ROUTE_CACHE_DEBUG,
+    DEFAULT_ROUTE_CACHE_DEBUG
+  )
