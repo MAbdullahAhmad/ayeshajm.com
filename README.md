@@ -30,6 +30,7 @@ A React + Vite portfolio project for Ayesha Jan M., prepared for CSR routing, th
 - `.env.prod` is a production template
 - `.env.example` documents all supported options with comments
 - `VITE_ROUTE_CACHE_TTL_MS` controls how long non-home pages stay cached after navigation
+- `VITE_ROUTE_CACHE_MAX_PAGES` controls how many non-home pages can stay loaded at once
 
 Recommended workflow:
 
