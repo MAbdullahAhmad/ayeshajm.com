@@ -8,10 +8,12 @@ export function createDevRoutes() {
       children: [
         {
           index: true,
+          handle: { cacheKey: 'dev:hub' },
           lazy: () => import('@/pages/dev/indexRoute.jsx'),
         },
         ...devSamples.map((sample) => ({
           path: sample.slug,
+          handle: { cacheKey: `dev:${sample.slug}` },
           lazy: sample.lazy,
         })),
       ],

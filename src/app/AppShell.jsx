@@ -1,5 +1,13 @@
-import { Outlet } from 'react-router-dom'
+import { AppHeader } from '@/components/layout/AppHeader.jsx'
+import { CachedRouteViewport } from '@/components/layout/CachedRouteViewport.jsx'
 
 export function AppShell() {
-  return <main className="min-h-screen"><Outlet /></main>
+  return (
+    <div className="min-h-screen bg-theme-bg text-theme-fg">
+      <AppHeader />
+      <main>
+        <CachedRouteViewport />
+      </main>
+    </div>
+  )
 }

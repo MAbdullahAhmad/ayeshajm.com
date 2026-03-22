@@ -2,12 +2,12 @@ import { createBrowserRouter } from 'react-router-dom'
 import { AppShell } from '@/app/AppShell'
 import { guestRoutes } from './guest/index.jsx'
 
-const devEnabled =
+const devRoutesEnabled =
   import.meta.env.DEV &&
   import.meta.env.VITE_ENABLE_DEV_ROUTES === 'true'
 
 async function getDevRoutes() {
-  if (!devEnabled) {
+  if (!devRoutesEnabled) {
     return []
   }
 
@@ -28,6 +28,7 @@ export async function createAppRouter() {
         ...devRoutes,
         {
           path: '*',
+          handle: { cacheKey: 'not-found' },
           lazy: () => import('@/pages/not-found/route.jsx'),
         },
       ],
