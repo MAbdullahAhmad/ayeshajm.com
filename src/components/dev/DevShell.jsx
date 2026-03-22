@@ -1,5 +1,5 @@
 import { Link, NavLink, Outlet } from 'react-router-dom'
-import { devSamples } from '@/pages/dev/devSamples.js'
+import { devSamples } from '@/routes/dev/samples.js'
 
 function navClassName({ isActive }) {
   return isActive

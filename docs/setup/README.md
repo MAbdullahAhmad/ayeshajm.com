@@ -39,9 +39,12 @@ This repository uses Vite with React in CSR mode. The app shell is eager, while 
 ## Router, CSR, and Lazy Loads
 
 - `src/main.jsx` mounts `RouterProvider` for the public app and the optional dev lab.
-- `src/router/routes.jsx` always registers `/`, and only registers `/dev/*` when both `import.meta.env.DEV` and `VITE_ENABLE_DEV_ROUTES === 'true'`.
+- `src/routes/index.jsx` is the only router bootstrap and assembles guest, dev, and not-found routes.
+- `src/routes/guest/index.jsx` owns current guest-facing routes for `/` and `/about`.
+- `src/routes/dev/index.jsx` registers `/dev/*` only when both `import.meta.env.DEV` and `VITE_ENABLE_DEV_ROUTES === 'true'`.
 - The `/dev` namespace is a nested internal lab with a hub page plus experiment routes such as rotate-on-scroll, Theatre sequence, and R3F basics.
-- Dev sample routes are lazy-loaded and kept isolated from public pages.
+- Dev sample metadata lives in `src/routes/dev/samples.js`.
+- Route groups lazy-load route modules from `src/pages/*`, while page UI stays in `src/pages/*`.
 - Production builds must behave as if the dev routes do not exist.
 
 ## Import Alias
@@ -57,12 +60,12 @@ This mapping is defined in both `vite.config.js` and `jsconfig.json`.
 ```text
 src/
   app/
-  router/
-  pages/
-    home/
+  routes/
+    guest/
     dev/
-    catalog/
-    case-study/
+  pages/
+    guest/
+    dev/
     not-found/
   components/
     dev/
@@ -88,5 +91,6 @@ public/
 
 - Theatre Studio initializes only in development through a guarded dynamic import.
 - Dev samples are enabled through `.env` and live only under `/dev`.
+- Guest routes currently own `/` and `/about`.
 - `public/models/` and `public/textures/` are reserved for compressed delivery assets.
 - `src/scenes/` is reserved for route-level Theatre state and related scene glue.

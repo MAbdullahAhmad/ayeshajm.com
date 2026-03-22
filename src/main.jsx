@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
 import { initTheatreStudio } from '@/lib/initTheatreStudio'
 import { initializeTheme } from '@/lib/theme'
-import { createAppRouter } from '@/router'
+import { createAppRouter } from '@/routes'
 import '@/styles/globals.css'
 
 initTheatreStudio()

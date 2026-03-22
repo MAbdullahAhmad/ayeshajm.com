@@ -1,5 +1,5 @@
 import { DevSampleCard } from '@/components/dev/DevSampleCard.jsx'
-import { devSamples } from './devSamples.js'
+import { devSamples } from '@/routes/dev/samples.js'
 
 export function DevHubPage() {
   return (

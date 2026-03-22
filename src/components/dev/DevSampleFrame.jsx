@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import {
   getAdjacentDevSamples,
   getDevSample,
-} from '@/pages/dev/devSamples.js'
+} from '@/routes/dev/samples.js'
 
 export function DevSampleFrame({ slug, children }) {
   const sample = getDevSample(slug)

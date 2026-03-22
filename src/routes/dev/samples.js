@@ -6,7 +6,7 @@ export const devSamples = [
       'A GSAP ScrollTrigger sandbox for scrubbed scroll rotation and cleanup behavior.',
     goal: 'Validate scroll-linked rotation before building production interactions.',
     notes: [
-      'Registers and tears down ScrollTrigger cleanly on route mount/unmount.',
+      'Registers and tears down ScrollTrigger cleanly on route mount and unmount.',
       'Uses a sticky viewport and long scroll range so scrub behavior is obvious.',
       'Surfaces live progress so thresholds and timing can be inspected quickly.',
     ],
@@ -17,7 +17,7 @@ export const devSamples = [
     title: 'Theatre Sequence',
     summary:
       'A TheatreJS playground for sequence position, object values, and saved state wiring.',
-    goal: 'Validate Theatre project/sheet/object plumbing in isolation from public pages.',
+    goal: 'Validate Theatre project, sheet, and object plumbing in isolation.',
     notes: [
       'Loads a saved on-disk Theatre project state from src/scenes/dev.',
       'Drives a Theatre object from the sequence playhead so DOM motion can be inspected quickly.',
@@ -30,9 +30,9 @@ export const devSamples = [
     title: 'R3F Basics',
     summary:
       'A minimal React Three Fiber route that proves the canvas shell, lights, and controls.',
-    goal: 'Validate the baseline Three/R3F route setup before introducing real assets.',
+    goal: 'Validate the baseline Three and R3F route setup before real assets.',
     notes: [
-      'Mounts a standalone Canvas route without affecting the homepage.',
+      'Mounts a standalone Canvas route without affecting guest pages.',
       'Uses only primitive geometry, lights, and OrbitControls.',
       'Acts as the lowest-risk place to test future scene helpers and camera setup.',
     ],

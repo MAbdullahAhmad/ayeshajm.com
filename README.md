@@ -43,3 +43,10 @@ When enabled during local development, the router registers an internal `/dev`
 lab with nested sample routes for interaction and rendering experiments. These
 pages are not part of the public site IA and must not be exposed in production
 builds.
+
+## Routing Layout
+
+- `src/routes/` owns route composition and route-group metadata
+- `src/pages/` owns route modules and page UI
+- `guest` currently owns `/` and `/about`
+- `dev` owns the internal `/dev/*` experiment lab
