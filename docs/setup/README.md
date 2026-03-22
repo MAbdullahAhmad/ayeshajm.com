@@ -38,11 +38,11 @@ This repository uses Vite with React in CSR mode. The app shell is eager, while 
 
 ## Router, CSR, and Lazy Loads
 
-- `src/main.jsx` mounts `RouterProvider` with a boot fallback for the first lazy route resolution.
-- `src/router/routes.jsx` defines the router with lazy route modules for `/`, `/catalog`, `/case-study`, and `*`.
-- `src/app/AppShell.jsx` owns shared layout UI and the route-transition loader by watching `useNavigation()`.
-- Page-local 3D placeholders are lazy-loaded inside the shared route-page layout to preserve chunk boundaries.
-- No route data loaders or actions are part of this setup phase.
+- `src/main.jsx` mounts `RouterProvider` for the public app and the optional dev lab.
+- `src/router/routes.jsx` always registers `/`, and only registers `/dev/*` when both `import.meta.env.DEV` and `VITE_ENABLE_DEV_ROUTES === 'true'`.
+- The `/dev` namespace is a nested internal lab with a hub page plus experiment routes such as rotate-on-scroll, Theatre sequence, and R3F basics.
+- Dev sample routes are lazy-loaded and kept isolated from public pages.
+- Production builds must behave as if the dev routes do not exist.
 
 ## Import Alias
 
@@ -60,15 +60,18 @@ src/
   router/
   pages/
     home/
+    dev/
     catalog/
     case-study/
     not-found/
   components/
+    dev/
     ui/
     3d/
     loaders/
     layout/
   scenes/
+    dev/
     home/
     catalog/
     shared/
@@ -84,5 +87,6 @@ public/
 ## Setup Notes
 
 - Theatre Studio initializes only in development through a guarded dynamic import.
+- Dev samples are enabled through `.env` and live only under `/dev`.
 - `public/models/` and `public/textures/` are reserved for compressed delivery assets.
 - `src/scenes/` is reserved for route-level Theatre state and related scene glue.

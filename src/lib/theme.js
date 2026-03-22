@@ -1,5 +1,5 @@
 const STORAGE_KEY = 'ayeshajm-theme'
-const DEFAULT_THEME = 'light'
+const DEFAULT_THEME = import.meta.env.VITE_THEME_DEFAULT || 'light'
 const THEMES = new Set(['light', 'dark'])
 
 export function initializeTheme() {
