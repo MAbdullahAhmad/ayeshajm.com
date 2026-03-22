@@ -1,6 +1,19 @@
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+coverage
+
+# Tooling
+tmp
+.vite
+*.log
+
 # Local files (for dev only)
 /_notes
 /local
 
 # Env configs
 .env
+.env.local
