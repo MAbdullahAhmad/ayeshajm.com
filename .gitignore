@@ -1,0 +1,6 @@
+# Local files (for dev only)
+/_notes
+/local
+
+# Env configs
+.env
