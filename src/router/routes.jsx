@@ -10,18 +10,6 @@ export const router = createBrowserRouter([
         index: true,
         lazy: () => import('@/pages/home/route.jsx'),
       },
-      {
-        path: 'catalog',
-        lazy: () => import('@/pages/catalog/route.jsx'),
-      },
-      {
-        path: 'case-study',
-        lazy: () => import('@/pages/case-study/route.jsx'),
-      },
-      {
-        path: '*',
-        lazy: () => import('@/pages/not-found/route.jsx'),
-      },
     ],
   },
 ])
