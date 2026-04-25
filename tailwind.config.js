@@ -10,6 +10,7 @@ export default {
         'theme-border': 'var(--color-border)',
         'theme-surface': 'var(--color-surface)',
         'theme-accent': 'var(--color-accent)',
+        'footer-bg': 'var(--color-footer-bg)',
       },
       fontFamily: {
         body: ['var(--font-body)', 'sans-serif'],

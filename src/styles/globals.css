@@ -1,24 +1,29 @@
 @config "../../tailwind.config.js";
 @import "tailwindcss";
 
+/* Enable class-based dark mode for `dark:` Tailwind prefix */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --font-body: sans-serif;
-  --font-display: sans-serif;
+  --font-body: 'Playfair', serif;
+  --font-display: 'Playfair Display', serif;
   --color-bg: #ffffff;
   --color-fg: #111111;
   --color-muted: #6b7280;
   --color-border: #e5e7eb;
-  --color-surface: #ffffff;
+  --color-surface: #f9f9f9;
   --color-accent: #111111;
+  --color-footer-bg: #000000;
 }
 
 [data-theme='dark'] {
-  --color-bg: #0a0a0a;
+  --color-bg: #0f0f0f;
   --color-fg: #f5f5f5;
   --color-muted: #a3a3a3;
   --color-border: #262626;
   --color-surface: #171717;
   --color-accent: #f5f5f5;
+  --color-footer-bg: #333333;
 }
 
 @layer base {
