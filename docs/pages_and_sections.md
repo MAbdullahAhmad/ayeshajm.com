@@ -1,0 +1,15 @@
+Pages:
+- Main
+    - Header (Name, Links, CTA) -- simple
+    - Hero -- bg=vid, text + para + CTA
+    - Featured Projects
+    - Case Study
+    - All Projects≈
+    - Testimonials
+    - Mission -- Omitted
+    - Contact (Quote) + Message
+    - Links
+    - Footer
+- Contact Page
+- About Page
+- Category Pages (Amazon, 3D)
