@@ -11,19 +11,19 @@
   --color-fg: #111111;
   --color-muted: #6b7280;
   --color-border: #e5e7eb;
-  --color-surface: #f9f9f9;
-  --color-accent: #111111;
+  --color-surface: #ffffff;
+  --color-accent: #6355d8;
   --color-footer-bg: #000000;
 }
 
 [data-theme='dark'] {
-  --color-bg: #0f0f0f;
+  --color-bg: #000000;
   --color-fg: #f5f5f5;
   --color-muted: #a3a3a3;
   --color-border: #262626;
-  --color-surface: #171717;
-  --color-accent: #f5f5f5;
-  --color-footer-bg: #333333;
+  --color-surface: #000000;
+  --color-accent: #a89ef8;
+  --color-footer-bg: #111111;
 }
 
 @layer base {

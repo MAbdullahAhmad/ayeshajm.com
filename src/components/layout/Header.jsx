@@ -51,7 +51,7 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-theme-bg border-b border-theme-border">
+    <header className="bg-theme-bg">
       <Container>
         <nav className="flex items-center justify-between py-4 gap-6">
           {/* Brand */}
@@ -63,7 +63,7 @@ export function Header() {
           </Link>
 
           {/* Nav links — hidden on small screens */}
-          <div className="hidden md:flex items-center gap-7 font-body text-sm">
+          <div className="hidden md:flex items-center gap-7 font-body text-base">
             <NavLink to="/" end className={navClass}>Home</NavLink>
             <NavLink to="/about" className={navClass}>About</NavLink>
             <NavLink to="/amazon" className={navClass}>Amazon</NavLink>

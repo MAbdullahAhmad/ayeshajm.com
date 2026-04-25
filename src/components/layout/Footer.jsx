@@ -8,8 +8,8 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About */}
           <div>
-            <h3 className="text-xl mb-4 font-display">Ayesha Jan M.</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <h3 className="text-2xl mb-5 font-display">Ayesha Jan M.</h3>
+            <p className="text-gray-400 text-base leading-relaxed">
               3D Artist & Designer specializing in product visualization, Amazon listings,
               and creative direction.
             </p>
@@ -17,22 +17,22 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-300">
+            <h4 className="mb-5 text-xs font-semibold uppercase tracking-widest text-gray-400">
               Navigation
             </h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-3 text-base">
               <li>
-                <Link to="/" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
                   Contact
                 </Link>
               </li>
@@ -41,17 +41,17 @@ export function Footer() {
 
           {/* Work */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-300">
+            <h4 className="mb-5 text-xs font-semibold uppercase tracking-widest text-gray-400">
               Work
             </h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-3 text-base">
               <li>
-                <Link to="/amazon" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/amazon" className="text-gray-300 hover:text-white transition-colors">
                   Amazon
                 </Link>
               </li>
               <li>
-                <Link to="/3d" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/3d" className="text-gray-300 hover:text-white transition-colors">
                   3D Projects
                 </Link>
               </li>
@@ -60,16 +60,16 @@ export function Footer() {
 
           {/* Connect */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-300">
+            <h4 className="mb-5 text-xs font-semibold uppercase tracking-widest text-gray-400">
               Connect
             </h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-3 text-base">
               <li>
                 <a
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   LinkedIn
                 </a>
@@ -79,7 +79,7 @@ export function Footer() {
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   Instagram
                 </a>
@@ -89,7 +89,7 @@ export function Footer() {
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   Behance
                 </a>
