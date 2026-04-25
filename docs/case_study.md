@@ -2,7 +2,7 @@
 
 ### Overview
 
-- **Client**: Ayesha Jan M. -- 3D Artist
+- **Client**: Ayesha JM. -- 3D Artist
 - **Type**: Website, SPA
 - **Stack**: ReactJS, CSR, 3D (ThreeJS / WebGL / TheatreJS), GSAP, Motion
 - **Keywords**: 3D, Animations, Transitions, Portfolio

@@ -1,6 +1,6 @@
 # ayeshajm.com
 
-A React + Vite portfolio project for Ayesha Jan M., prepared for CSR routing, theming, animation tooling, and future 3D scene work.
+A React + Vite portfolio project for Ayesha JM., prepared for CSR routing, theming, animation tooling, and future 3D scene work.
 
 | [Documentation](./docs/README.md) | [Case Study](./docs/case_study.md) | [License](./LICENSE) |
 | --- | --- | --- |

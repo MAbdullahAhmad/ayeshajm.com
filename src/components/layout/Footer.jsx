@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About */}
           <div>
-            <h3 className="text-2xl mb-5 font-display">Ayesha Jan M.</h3>
+            <h3 className="text-2xl mb-5 font-display">Ayesha JM.</h3>
             <p className="text-gray-400 text-base leading-relaxed">
               3D Artist & Designer specializing in product visualization, Amazon listings,
               and creative direction.
@@ -99,7 +99,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} Ayesha Jan M. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Ayesha JM. All rights reserved.</p>
         </div>
       </Container>
     </footer>

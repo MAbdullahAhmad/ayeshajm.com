@@ -59,7 +59,7 @@ export function Header() {
             to="/"
             className="text-lg font-semibold text-theme-fg shrink-0 font-display"
           >
-            Ayesha Jan M.
+            Ayesha JM.
           </Link>
 
           {/* Nav links — hidden on small screens */}
