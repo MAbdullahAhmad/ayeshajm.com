@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, LayoutGroup } from 'framer-motion'
 import { Container } from '@/components/layout/Container'
 import { TextRotate } from '@/components/ui/TextRotate'
 
@@ -188,27 +188,33 @@ export function HeroSection() {
         <div className="flex flex-col items-center text-center py-28 space-y-8">
           {/* Heading */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-display text-gray-900 dark:text-white leading-tight">
-            <span className="inline-flex flex-wrap items-baseline justify-center gap-x-3">
-              <TextRotate words={ROTATING_WORDS} />
-              <span className="inline-flex">
-                {ARTIST_CHARS.map((char, i) => (
-                  <motion.span
-                    key={i}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                      delay: 0.15 + i * 0.04,
-                      type: 'spring',
-                      stiffness: 300,
-                      damping: 20,
-                    }}
-                    className="inline-block"
-                  >
-                    {char}
-                  </motion.span>
-                ))}
-              </span>
-            </span>
+            <LayoutGroup id="hero-heading">
+              <motion.span layout className="inline-flex flex-wrap items-baseline justify-center gap-[0.3em]">
+                <TextRotate words={ROTATING_WORDS} />
+                <motion.span
+                  layout
+                  transition={{ type: 'spring', stiffness: 380, damping: 13 }}
+                  className="inline-flex"
+                >
+                  {ARTIST_CHARS.map((char, i) => (
+                    <motion.span
+                      key={i}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        delay: 0.15 + i * 0.04,
+                        type: 'spring',
+                        stiffness: 300,
+                        damping: 20,
+                      }}
+                      className="inline-block"
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                </motion.span>
+              </motion.span>
+            </LayoutGroup>
           </h1>
 
           {/* Paragraph */}

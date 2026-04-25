@@ -15,6 +15,7 @@ export function TextRotate({ words, className = '' }) {
     <AnimatePresence mode="wait">
       <motion.span
         key={words[index]}
+        layout
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
